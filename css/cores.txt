@@ -1,5 +1,5 @@
-3d3d3d
-9a8064
+#3d3d3d - Preto
+#9a8064 - Dourado
 
-#474056
-#757083
+#757083 - Azul escuro 1
+#474056 - Azul escuro 2

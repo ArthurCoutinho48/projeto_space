@@ -67,7 +67,7 @@ main{
 }
 
 .card-login{
-    width: 50%; /*Pegou 60% da viewport*/
+    width: 390px; /*Pegou 60% da viewport*/
     margin: center;
     display: flex; /*Deixou lado a lado a div do lado esquerdo*/
     justify-content: center; /* Deixou a div centralizadas no eixo X*/
@@ -137,9 +137,11 @@ main{
 .cadastro-senha{
     color: white;
     letter-spacing: 0.5px;
-    outline: none;
 }
 
+div > label > a{
+    color: white;
+}
 
 @media only screen and (max-width: 950px){
     .card-login{
