@@ -1,0 +1,163 @@
+/*Configurações gerais*/
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --cor0: #474056;
+    --cor1: #757083;
+    --cor2: #3d3d3d;
+    --cor3: #9a8064;
+
+    --font-padrao: 'Bebas Neue', Arial;
+}
+
+body{
+    margin: 0px;
+    font-family: var(--font-padrao);
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+main{
+    width: 100vw; /*Viewport(Tela) largura*/
+    height: 100vh; /*Viewport(Tela) altura*/
+}
+
+.main{
+    background-color: var(--cor0);
+    display: flex; /*Deixou lado a lado as divs do lado direito e esquerdo*/
+    justify-content: center; /* Deixou as divs centralizadas no eixo X*/
+    align-items: center; /* Deixou as divs centralizadas no eixo Y*/
+}
+
+/*Inicio das configurações lado esquerdo*/
+
+.left-login{
+    width: 50vw; /*Viewport(Tela) largura*/
+    height: 100vh; /*Viewport(Tela) altura*/
+    display: flex; /*Deixou lado a lado a div do lado direito*/
+    justify-content: center; /* Deixou a div centralizadas no eixo X*/
+    align-items: center; /* Deixou as div centralizada no eixo Y*/
+    flex-direction: column;
+}
+
+.left-login > h1{
+    color: white;
+    font-size: 3vh;
+    letter-spacing: 10px;
+}
+
+.left-login-image{
+    width: 35vw;
+}
+
+/*Inicio das configurações lado direito*/
+
+.right-login{
+    width: 50vw; /*Viewport(Tela) largura*/
+    height: 100vh; /*Viewport(Tela) altura*/
+    display: flex; /*Deixou lado a lado a div do lado direito*/
+    justify-content: center; 
+    /* Deixou a div centralizadas no eixo X*/
+    align-items: center; /* Deixou as div centralizada no eixo Y*/
+}
+
+.card-login{
+    width: 50%; /*Pegou 60% da viewport*/
+    margin: center;
+    display: flex; /*Deixou lado a lado a div do lado esquerdo*/
+    justify-content: center; /* Deixou a div centralizadas no eixo X*/
+    align-items: center; /* Deixou as div centralizada no eixo Y*/
+    flex-direction: column; /*Deixa o conteudo um embaixo do outro*/
+    padding: 35px 35px; /*Bordas internas da caixa*/
+    background-color: var(--cor1);
+    border-radius: 20px; /*Borda da caixa*/
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.150); /*Sombreamento*/
+}
+
+.card-login > h1{
+    color: white;
+    font-weight: bold; /*Expessura da fonte*/
+    letter-spacing: 3px; /*Espaçamento entre as letras*/
+    margin: 0; /*Retirando a margem do título*/
+}
+
+.textfielde{
+    width: 100%; /*Pegou 100% da viewport*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; 
+    margin: 10px 0px;
+}
+
+.textfielde > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--cor2);
+    color: white;
+    font-size: 12px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.150);
+    outline: none; /*Retirou o contorno da caixa do input*/
+    box-sizing: border-box; /*A caixa do input não passara da bordar da caixa principal*/
+}
+
+.textfielde > input::placeholder{
+    color: rgba(255, 255, 255, 0.200);
+}
+
+.textfielde > label{
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase; /*Transformou todas as letras em maisculas*/
+    font-weight: 800;
+    letter-spacing: 3px;
+    background-color: var(--cor0);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.150);
+}
+
+.cadastro-senha{
+    color: white;
+    letter-spacing: 0.5px;
+    outline: none;
+}
+
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .body{
+        width: 500vw;
+    }
+    .main{
+        flex-direction: column;
+    }
+    .left-login{
+        display: none;
+    }
+    .right-login{
+        width: 100%;
+    }
+}
