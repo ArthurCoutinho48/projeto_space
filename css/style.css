@@ -24,15 +24,13 @@ body * {
 
 main{
     width: 100vw; /*Viewport(Tela) largura*/
-    height: 100vh; /*Viewport(Tela) altura*/
-}
-
-.main{
+    height: 95vh; /*Viewport(Tela) altura*/
     background-color: var(--cor0);
     display: flex; /*Deixou lado a lado as divs do lado direito e esquerdo*/
     justify-content: center; /* Deixou as divs centralizadas no eixo X*/
     align-items: center; /* Deixou as divs centralizadas no eixo Y*/
 }
+
 
 /*Inicio das configurações lado esquerdo*/
 
@@ -141,6 +139,21 @@ main{
 
 div > label > a{
     color: white;
+}
+
+/*Rodapé*/
+
+footer{
+    height: 5vh;
+    background-color: var(--cor2);
+}
+
+footer > p{
+    padding: 6px;
+    margin: 0px;
+    color: honeydew;
+    text-align: center;
+    letter-spacing: 5px;
 }
 
 @media only screen and (max-width: 950px){
