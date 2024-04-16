@@ -1,0 +1,104 @@
+/*Configurações gerais*/
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --cor0: #474056;
+    --cor1: #757083;
+    --cor2: #3d3d3d;
+    --cor3: #9a8064;
+
+    --font-padrao: 'Bebas Neue', Arial;
+}
+
+body{
+    margin: 0px;
+    font-family: var(--font-padrao);
+    width: 100vw; /*Viewport(Tela) largura*/
+    height: 100vh; /*Viewport(Tela) altura*/
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+main{
+    width: 100vw; /*Viewport(Tela) largura*/
+    height: 100vh; /*Viewport(Tela) altura*/
+    display: flex; /*Deixou lado a lado as divs do lado direito e esquerdo*/
+    justify-content: center; /* Deixou as divs centralizadas no eixo X*/
+    align-items: center; /* Deixou as divs centralizadas no eixo Y*/
+    background-color: white; /*Cor de fundo*/
+}
+
+/*Inicio das configurações*/
+
+.card-recover{
+    width: 400px;
+    margin: center;
+    display: flex;
+    justify-content: center; /* Deixou a div centralizadas no eixo X*/
+    align-items: center; /* Deixou as div centralizada no eixo Y*/
+    flex-direction: column; /*Deixa o conteudo um embaixo do outro*/
+    padding: 35px 35px; /*Bordas internas da caixa*/
+    background-color: var(--cor2); /*Cor do caixa*/
+    border-radius: 20px; /*Borda da caixa*/
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.500); /*Sombreamento*/
+}
+
+.logo-cadastro{
+    width: 100px;
+    display: flex;
+    justify-content: center; /* Deixou a div centralizadas no eixo X*/
+    align-items: center; /* Deixou as div centralizada no eixo Y*/
+}
+
+.textfielde{
+    width: 100%; /*Pegou 100% da viewport*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; 
+    margin: 10px 0px;
+}
+
+.textfielde > label{
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.textfielde > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--cor2);
+    color: white;
+    font-size: 12px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.150);
+    outline: none; /*Retirou o contorno da caixa do input*/
+    box-sizing: border-box; /*A caixa do input não passara da bordar da caixa principal*/
+}
+
+.textfielde > input::placeholder{
+    color: rgba(255, 255, 255, 0.200); /*Cor da palavra do input*/
+}
+
+.btn-recover{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase; /*Transformou todas as letras em maisculas*/
+    font-weight: 800;
+    letter-spacing: 3px;
+    background-color: white; /*Cor da caixa do entrar*/
+    color: var(--cor2);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.150);
+}
