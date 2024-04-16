@@ -102,3 +102,9 @@ main{
     cursor: pointer;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.150);
 }
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 400px;
+    }
+}
