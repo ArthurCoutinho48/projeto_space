@@ -16,6 +16,8 @@
 body{
     margin: 0px;
     font-family: var(--font-padrao);
+    width: 100vw; /*Viewport(Tela) largura*/
+    height: 100vh; /*Viewport(Tela) altura*/
 }
 
 body * {
@@ -24,64 +26,33 @@ body * {
 
 main{
     width: 100vw; /*Viewport(Tela) largura*/
-    height: 95vh; /*Viewport(Tela) altura*/
-    background-color: var(--cor0);
+    height: 100vh; /*Viewport(Tela) altura*/
     display: flex; /*Deixou lado a lado as divs do lado direito e esquerdo*/
     justify-content: center; /* Deixou as divs centralizadas no eixo X*/
     align-items: center; /* Deixou as divs centralizadas no eixo Y*/
+    background-color: white; /*Cor de fundo*/
 }
 
-
-/*Inicio das configurações lado esquerdo*/
-
-.left-login{
-    width: 50vw; /*Viewport(Tela) largura*/
-    height: 100vh; /*Viewport(Tela) altura*/
-    display: flex; /*Deixou lado a lado a div do lado direito*/
-    justify-content: center; /* Deixou a div centralizadas no eixo X*/
-    align-items: center; /* Deixou as div centralizada no eixo Y*/
-    flex-direction: column;
-}
-
-.left-login > h1{
-    color: white;
-    font-size: 3vh;
-    letter-spacing: 10px;
-}
-
-.left-login-image{
-    width: 35vw;
-}
-
-/*Inicio das configurações lado direito*/
-
-.right-login{
-    width: 50vw; /*Viewport(Tela) largura*/
-    height: 100vh; /*Viewport(Tela) altura*/
-    display: flex; /*Deixou lado a lado a div do lado direito*/
-    justify-content: center; 
-    /* Deixou a div centralizadas no eixo X*/
-    align-items: center; /* Deixou as div centralizada no eixo Y*/
-}
+/*Inicio das configurações*/
 
 .card-login{
-    width: 390px; /*Pegou 60% da viewport*/
+    width: 400px;
     margin: center;
-    display: flex; /*Deixou lado a lado a div do lado esquerdo*/
+    display: flex;
     justify-content: center; /* Deixou a div centralizadas no eixo X*/
     align-items: center; /* Deixou as div centralizada no eixo Y*/
     flex-direction: column; /*Deixa o conteudo um embaixo do outro*/
     padding: 35px 35px; /*Bordas internas da caixa*/
-    background-color: var(--cor1);
+    background-color: var(--cor2); /*Cor do caixa*/
     border-radius: 20px; /*Borda da caixa*/
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.150); /*Sombreamento*/
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.500); /*Sombreamento*/
 }
 
-.card-login > h1{
-    color: white;
-    font-weight: bold; /*Expessura da fonte*/
-    letter-spacing: 3px; /*Espaçamento entre as letras*/
-    margin: 0; /*Retirando a margem do título*/
+.logo-cadastro{
+    width: 100px;
+    display: flex;
+    justify-content: center; /* Deixou a div centralizadas no eixo X*/
+    align-items: center; /* Deixou as div centralizada no eixo Y*/
 }
 
 .textfielde{
@@ -91,6 +62,12 @@ main{
     align-items: flex-start;
     flex-direction: column; 
     margin: 10px 0px;
+}
+
+.textfielde > label{
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
 }
 
 .textfielde > input{
@@ -107,13 +84,7 @@ main{
 }
 
 .textfielde > input::placeholder{
-    color: rgba(255, 255, 255, 0.200);
-}
-
-.textfielde > label{
-    color: white;
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.200); /*Cor da palavra do input*/
 }
 
 .btn-login{
@@ -126,8 +97,8 @@ main{
     text-transform: uppercase; /*Transformou todas as letras em maisculas*/
     font-weight: 800;
     letter-spacing: 3px;
-    background-color: var(--cor0);
-    color: white;
+    background-color: white; /*Cor da caixa do entrar*/
+    color: var(--cor2);
     cursor: pointer;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.150);
 }
@@ -141,38 +112,8 @@ div > label > a{
     color: white;
 }
 
-/*Rodapé*/
-
-footer{
-    height: 5vh;
-    background-color: var(--cor2);
-}
-
-footer > p{
-    padding: 6px;
-    margin: 0px;
-    color: honeydew;
-    text-align: center;
-    letter-spacing: 5px;
-}
-
 @media only screen and (max-width: 950px){
     .card-login{
-        width: 85%;
-    }
-}
-
-@media only screen and (max-width: 600px){
-    .body{
-        width: 500vw;
-    }
-    .main{
-        flex-direction: column;
-    }
-    .left-login{
-        display: none;
-    }
-    .right-login{
-        width: 100%;
+        width: 400px;
     }
 }
