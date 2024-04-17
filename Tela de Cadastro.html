@@ -1,90 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #44015f;
-        }
-        .container {
-            width: 300px;
-            padding: 16px;
-            background-color: #723988;
-            margin: 0 auto;
-            margin-top: 100px;
-            border: 1px solid black;
-            border-radius: 4px;
-        }
-        input[type=text], input[type=email], input[type=password], input[type=date] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        select {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #1d0029;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-        button:hover {
-            opacity: 0.8;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Space</title>
+    <link rel="stylesheet" href="css/style01.css">
+    <link rel="shortcut icon" href="imagens/logo-oficial/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
-        <label for="uname"><b>Nome</b></label>
-        <input type="text" placeholder="Insira o Nome" name="uname" required>
+    <main> 
+        
+        
+        <div class="card-login"> <!--Caixa Login-->
 
-        <label for="email"><b>Email</b></label>
-        <input type="email" placeholder="Insira o Email" name="email" required>
+            <a href="#"><img src="imagens/logo-oficial/android-chrome-192x192.png" alt="Logo" class="logo-cadastro"></a>
 
-        <label for="psw"><b>Senha</b></label>
-        <input type="password" placeholder="Insira a Senha" name="psw" required>
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="uname">Nome Completo</label>
+                <input type="text" placeholder="Insira o Nome Completo" name="uname" required="">
+            </div>
+        
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="email">Email</label>
+                <input type="text" placeholder="Insira o Email" name="email" required="">
+            </div>
 
-        <label for="psw-repeat"><b>Repetir Senha</b></label>
-        <input type="password" placeholder="Repita a Senha" name="psw-repeat" required>
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="password">Senha</label>
+                <input type="text" placeholder="Insira a Senha" name="password" required="">
+            </div>
+            
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="repassword">Repetir Senha</label>
+                <input type="text" placeholder="Repita a Senha" name="repassword" required="">
+            </div>
 
-        <label for="cpf"><b>CPF</b></label>
-        <input type="text" placeholder="Insira o CPF" name="cpf" required>
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="cpf"><b>CPF</b></label>
+                <input type="text" placeholder="Insira o CPF" name="cpf" required="">
+            </div>
 
-        <label for="dob"><b>Data de Nascimento</b></label>
-        <input type="date" name="dob" required>
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="dob">Data de Nascimento</label>
+                <input type="date" name="dob" required="">
+            </div>
 
-        <label for="address"><b>Endereço Completo</b></label>
-        <input type="text" placeholder="Insira o Endereço" name="address" required>
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="end">Endereço Completo</label>
+                <input type="text" placeholder="Insira seu Endereço Completo" name="end" required="">
+            </div>
 
-        <label for="cep"><b>CEP</b></label>
-        <input type="text" placeholder="Insira o CEP" name="cep" required>
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="cep">CEP</label>
+                <input type="text" placeholder="Insira seu CEP" name="cep" required="">
+            </div>
 
-        <label for="bairro"><b>Bairro</b></label>
-        <input type="text" placeholder="Insira o Bairro" name="bairro" required>
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="bairro">Bairro</label>
+                <input type="text" placeholder="Insira seu Bairro" name="bairro" required="">
+            </div>
 
-        <label for="cidade"><b>Cidade</b></label>
-        <input type="text" placeholder="Insira a Cidade" name="cidade" required>
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="town">Cidade</label>
+                <input type="text" placeholder="Insira sua Cidade" name="town" required="">
+            </div>
 
-        <label for="gender"><b>Sexo</b></label>
-        <select name="gender">
-            <option value="male">Masculino</option>
-            <option value="female">Feminino</option>
-            <option value="other">Outro</option>
-        </select>
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="gender">Sexo</label>
+                <select name="gender">
+                <option value="male">Masculino</option>
+                <option value="female">Feminino</option>
+                <option value="other">Outro</option>
+                </select>
+            </div>
+            
+            <button class="btn-login" type="submit" nane="Confirmar" id="confirm">Confirmar</button>
 
-        <button type="submit">Cadastrar</button>
-    </div>
+            
+
+        </div>
+    </main>
 </body>
 </html>
