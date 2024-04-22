@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --cor0: #474056;
+    --cor1: #757083;
+    --cor2: #3d3d3d;
+    --cor3: #9a8064;
+
+    --font-padrao: 'Bebas Neue', Arial;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--font-padrao);
+}
+
+header{
+    max-width: 100vw;
+    background-color: var(--cor2);
+}
+
+.interface{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.top-header{
+    background-color: white;
+    padding: 20px 5%;
+}
+
+.top-header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-header .logotipo img{
+    max-width: 100px;
+}
+
+.bottom-header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.bottom-header nav ul li a{
+    color: white;
+    padding: 10px 40px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    display: block;
+    transition: .2s;
+}
+
+.bottom-header nav ul li a:hover{
+    background-color: var(--cor3);
+}
+
+.drop-hover{
+    position: relative;
+}
+
+.drop-hover .drop{
+    position: absolute;
+    background-color: var(--cor2);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.drop-hover .drop a{
+    padding: 20px;
+}
+
+.drop-hover:hover .drop{
+    height: 255px;
+}

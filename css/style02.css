@@ -13,15 +13,15 @@
     --font-padrao: 'Bebas Neue', Arial;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0px;
     font-family: var(--font-padrao);
     width: 100vw; /*Viewport(Tela) largura*/
     height: 100vh; /*Viewport(Tela) altura*/
-}
-
-body * {
-    box-sizing: border-box;
 }
 
 main{
