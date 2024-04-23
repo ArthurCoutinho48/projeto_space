@@ -14,11 +14,12 @@
 }
 
 *{
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
 body{
-    margin: 0px;
     font-family: var(--font-padrao);
     width: 100vw; /*Viewport(Tela) largura*/
     height: 100vh; /*Viewport(Tela) altura*/
@@ -27,49 +28,53 @@ body{
 /*------------- INICIO DAS CONFIGURAÇÕES MENU -------------*/
 
 header{
-    min-width: 100vw;
-    display: flex;
-    flex-direction: column;
+    width: 100vw;
     background-color: var(--cor2);
 }
 
-interface{
-    width: 100%;
-    margin: 0 auto;
-}
-
-.top-header{
-    background-color: white;
-    padding: 10px 5%;
-}
-
-.top-header > .interface{
+section.header{
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    background-color: var(--cor2);
 }
 
-.top-header .logotipo img{
+.logotipo{
+    padding-right: 50px;
+    font-family: var(--font-padrao);
+}
+
+.logotipo img{
     max-width: 100px;
 }
 
-.bottom-header nav ul{
+.logotipo > a img{
+    color: white;
+}
+
+section > nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
     list-style-type: none;
 }
 
-.bottom-header nav ul li a{
+section > nav ul li a{
     color: white;
-    padding: 5px 40px;
+    padding: 10px 30px;
+    font-family: var(--font-padrao);
     text-decoration: none;
     letter-spacing: 0.5px;
     display: block;
     transition: .2s;
 }
 
-.bottom-header nav ul li a:hover{
+section > nav ul li a:hover{
     background-color: var(--cor3);
 }
 
@@ -87,16 +92,23 @@ interface{
 }
 
 .drop-hover .drop a{
-    padding: 5px;
+    padding: 10px;
 }
 
 .drop-hover:hover .drop{
-    height: 124px;
+    height: 164px;
 }
 
-ul{
-    margin: 0px;
+.btn-social{
+    padding-left: 50px;
 }
+
+.btn-social > a{
+    color: white;
+    font-family: var(--font-padrao);
+    text-decoration: none;
+}
+
 
 /*------------- INICIO DAS CONFIGURAÇÕES RECUPERAÇÃO DE SENHA -------------*/
 
