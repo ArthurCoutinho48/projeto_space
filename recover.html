@@ -4,10 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esqueci a senha - Space</title>
-    <link rel="stylesheet" href="css/style02.css">
+    <link rel="stylesheet" href="css/styleRecover.css">
     <link rel="shortcut icon" href="imagens/logo-oficial/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+    <!------------- INICIO DAS CONFIGURAÇÕES MENU ------------->
+
+    <header>
+
+
+        <section class="top-header">
+
+            <div class="interface"> 
+                
+                <div class="logotipo">
+                    <img src="" alt="Logo Oficial">
+                </div>
+
+                <div class="btn-social">
+                    <a href="">Fale Conosco</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="bottom-header">
+
+            <div class="interface">
+                
+                <nav>
+                    <ul>
+                        <li><a href="#">Destaques</a></li>
+                        <li class="drop-hover"><a href="#">Masculino</a>
+                            <div class="drop">
+                                <a href="#">Nike</a>
+                                <a href="#">Adidas</a>
+                                <a href="#">Puma</a>
+                                <a href="#">Kappa</a>
+                            </div>
+                        </li>
+                        <li class="drop-hover"><a href="#">Feminino</a>
+                            <div class="drop">
+                                <a href="#">Nike</a>
+                                <a href="#">Adidas</a>
+                                <a href="#">Puma</a>
+                                <a href="#">Kappa</a>
+                            </div>
+                        </li>
+                        <li><a href="#">Acessórios</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </section>
+
+    </header>
+
+    <!------------- INICIO DAS CONFIGURAÇÕES RECUPERAÇÃO DE SENHA ------------->
 
     <main>
 
@@ -16,8 +72,18 @@
             <a href="login.html"><img src="imagens/logo-oficial/android-chrome-192x192.png" alt="Logo" class="logo-cadastro"></a>
 
             <div class="textfielde"> <!--Campo de Texto-->
-                <label for="usuario">E-mail de Recuperação</label>
-                <input type="email" name="usuario" id="Idusuario" placeholder="E-mail">
+                <label for="usuario">Usuário</label>
+                <input type="" name="usuario" id="Idusuario" placeholder="Usuário">
+            </div>
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="senha">Nova Senha</label>
+                <input type="password" name="senha" id="Idsenha" placeholder="Nova Senha">
+            </div>
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="senha">Confirme senha</label>
+                <input type="password" name="senha" id="Idsenha" placeholder="Confirme Senha">
             </div>
 
             <button class="btn-recover" type="submit" nane="entrar" id="Identrar">Enviar</button>
