@@ -1,0 +1,207 @@
+/*Configurações gerais*/
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --cor0: #474056;
+    --cor1: #757083;
+    --cor2: #3d3d3d;
+    --cor3: #9a8064;
+
+    --font-padrao: 'Bebas Neue', Arial;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-padrao);
+    width: 100vw; /*Viewport(Tela) largura*/
+    height: 100vh; /*Viewport(Tela) altura*/
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+/*------------- INICIO DAS CONFIGURAÇÕES MENU -------------*/
+
+header{
+    width: 100vw;
+    background-color: var(--cor2);
+}
+
+section.header{
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor2);
+}
+
+.logotipo{
+    padding-right: 50px;
+    font-family: var(--font-padrao);
+}
+
+.logotipo img{
+    max-width: 100px;
+}
+
+.logotipo > a img{
+    color: white;
+}
+
+section > nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+section > nav ul li a{
+    color: white;
+    padding: 10px 30px;
+    font-family: var(--font-padrao);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    display: block;
+    transition: .2s;
+}
+
+section > nav ul li a:hover{
+    background-color: var(--cor3);
+}
+
+.drop-hover{
+    position: relative;
+}
+
+.drop-hover .drop{
+    position: absolute;
+    background-color: var(--cor2);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.drop-hover .drop a{
+    padding: 10px;
+}
+
+.drop-hover:hover .drop{
+    height: 164px;
+}
+
+.btn-social{
+    padding-left: 50px;
+}
+
+.btn-social > a{
+    color: grey;
+    font-family: var(--font-padrao);
+    text-decoration: none;
+}
+
+/*------------- INICIO DAS CONFIGURAÇÕES LOGIN -------------*/
+
+main{
+    width: 100vw; /*Viewport(Tela) largura*/
+    height: 80vh; /*Viewport(Tela) altura*/
+    display: flex; /*Deixou lado a lado as divs do lado direito e esquerdo*/
+    justify-content: center; /* Deixou as divs centralizadas no eixo X*/
+    align-items: center; /* Deixou as divs centralizadas no eixo Y*/
+    background-color: white; /*Cor de fundo*/
+}
+
+.card-login{
+    width: 400px;
+    margin: center;
+    display: flex;
+    justify-content: center; /* Deixou a div centralizadas no eixo X*/
+    align-items: center; /* Deixou as div centralizada no eixo Y*/
+    flex-direction: column; /*Deixa o conteudo um embaixo do outro*/
+    padding: 35px 35px; /*Bordas internas da caixa*/
+    background-color: var(--cor2); /*Cor do caixa*/
+    border-radius: 20px; /*Borda da caixa*/
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.500); /*Sombreamento*/
+}
+
+.logo-cadastro{
+    width: 100px;
+    display: flex;
+    justify-content: center; /* Deixou a div centralizadas no eixo X*/
+    align-items: center; /* Deixou as div centralizada no eixo Y*/
+}
+
+.textfielde{
+    width: 100%; /*Pegou 100% da viewport*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; 
+    margin: 10px 0px;
+}
+
+.textfielde > label{
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.textfielde > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--cor2);
+    color: white;
+    font-size: 12px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.150);
+    outline: none; /*Retirou o contorno da caixa do input*/
+    box-sizing: border-box; /*A caixa do input não passara da bordar da caixa principal*/
+}
+
+.textfielde > input::placeholder{
+    color: rgba(255, 255, 255, 0.200); /*Cor da palavra do input*/
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase; /*Transformou todas as letras em maisculas*/
+    font-weight: 800;
+    letter-spacing: 3px;
+    background-color: white; /*Cor da caixa do entrar*/
+    color: var(--cor2);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.150);
+}
+
+.cadastro-senha{
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+div > label > a{
+    color: var(--cor3);
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 400px;
+    }
+}

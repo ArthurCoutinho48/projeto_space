@@ -1,84 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Space</title>
-    <link rel="stylesheet" href="css/styleCadastro.css">
+    <link rel="stylesheet" href="css/styleLogin.css">
     <link rel="shortcut icon" href="imagens/logo-oficial/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-    <main> 
-        
-        
+    <main>
+
         <div class="card-login"> <!--Caixa Login-->
 
-            <a href="#"><img src="imagens/logo-oficial/android-chrome-192x192.png" alt="Logo" class="logo-cadastro"></a>
+            <div class="flex-container">
 
-            <div class="textfielde"> <!--Campo de Texto-->
-                <label for="uname">Nome Completo</label>
-                <input type="text" placeholder="Insira o Nome Completo" name="uname" required="">
-            </div>
-        
-            <div class="textfielde"> <!--Campo de Texto-->
-                <label for="email">Email</label>
-                <input type="text" placeholder="Insira o Email" name="email" required="">
-            </div>
+                <a href="#"><img src="imagens/logo-oficial/android-chrome-192x192.png" alt="Logo"
+                        class="logo-cadastro"></a>
 
-            <div class="textfielde"> <!--Campo de Texto-->
-                <label for="password">Senha</label>
-                <input type="text" placeholder="Insira a Senha" name="password" required="">
-            </div>
-            
-            <div class="textfielde"> <!--Campo de Texto-->
-                <label for="repassword">Repetir Senha</label>
-                <input type="text" placeholder="Repita a Senha" name="repassword" required="">
-            </div>
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="uname">Nome Completo</label>
+                    <input type="text" placeholder="Insira o Nome Completo" name="uname" minlength="15" maxlength="80"
+                        required="">
+                </div>
 
-            <div class="textfielde"> <!--Campo de Texto-->
-                <label for="cpf">CPF</label>
-                <input type="text" placeholder="Insira o CPF" name="cpf" required="">
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Insira o Email" name="email" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="password">Senha</label>
+                    <input type="text" placeholder="Insira a Senha" name="password" required="">
+                </div>
+
             </div>
 
-            <div class="textfielde"> <!--Campo de Texto-->
-                <label for="dob">Data de Nascimento</label>
-                <input type="date" name="dob" required="">
+
+            <div class="flex-container">
+
+                <div class=" textfielde"> <!--Campo de Texto-->
+                    <label for="repassword">Repetir Senha</label>
+                    <input type="text" placeholder="Repita a Senha" name="repassword" required="">
+                </div>
+
+
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="matname">Nome Materno</label>
+                    <input type="text" placeholder="Insira o Nome Completo de sua mãe" name="matname" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="cel">Telefone celular</label>
+                    <input type="text" placeholder="(+55)XX-XXXXXXXX" name="cel" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="fixcel">Telefone fixo</label>
+                    <input type="text" placeholder="Insira o seu telefone fixo" name="fixcel" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="cpf">CPF</label>
+                    <input type="text" placeholder="Insira o CPF" name="cpf" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="dob">Data de Nascimento</label>
+                    <input type="date" name="dob" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="end">Tipo de Logradouro</label>
+                    <input type="text" placeholder="Insira seu Endereço Completo" name="end" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="end">Logradouro</label>
+                    <input type="text" placeholder="Insira seu logradouro" name="end" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="end">Número</label>
+                    <input type="text" placeholder="Insira o número de seu endereço" name="end" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="end">Complemento (se houver)</label>
+                    <input type="text" placeholder="Insira o complemento de seu endereço" name="end" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="end">Bairro</label>
+                    <input type="text" placeholder="Insira o seu bairro" name="end" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="cep">CEP</label>
+                    <input type="text" placeholder="Insira seu CEP" name="cep" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="bairro">Bairro</label>
+                    <input type="text" placeholder="Insira seu Bairro" name="bairro" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="town">Cidade</label>
+                    <input type="text" placeholder="Insira sua Cidade" name="town" required="">
+                </div>
+
+                <div class="textfielde"> <!--Campo de Texto-->
+                    <label for="gender">Sexo</label>
+                    <select name="gender">
+                        <option value="male">Masculino</option>
+                        <option value="female">Feminino</option>
+                        <option value="other">Outro</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="textfielde"> <!--Campo de Texto-->
-                <label for="end">Endereço Completo</label>
-                <input type="text" placeholder="Insira seu Endereço Completo" name="end" required="">
-            </div>
-
-            <div class="textfielde"> <!--Campo de Texto-->
-                <label for="cep">CEP</label>
-                <input type="text" placeholder="Insira seu CEP" name="cep" required="">
-            </div>
-
-            <div class="textfielde"> <!--Campo de Texto-->
-                <label for="bairro">Bairro</label>
-                <input type="text" placeholder="Insira seu Bairro" name="bairro" required="">
-            </div>
-
-            <div class="textfielde"> <!--Campo de Texto-->
-                <label for="town">Cidade</label>
-                <input type="text" placeholder="Insira sua Cidade" name="town" required="">
-            </div>
-
-            <div class="textfielde"> <!--Campo de Texto-->
-                <label for="gender">Sexo</label>
-                <select name="gender">
-                <option value="male">Masculino</option>
-                <option value="female">Feminino</option>
-                <option value="other">Outro</option>
-                </select>
-            </div>
-            
             <button class="btn-login" type="submit" nane="Confirmar" id="confirm">Confirmar</button>
-
-            
-
         </div>
+
+
+
     </main>
 </body>
+
 </html>
