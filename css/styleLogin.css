@@ -39,16 +39,13 @@ section.header{
     min-width: 300px;
     max-width: 1000px;
     margin: auto;
-    padding-left: 5%;
-    padding-right: 5%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: var(--cor2);
 }
 
 .logotipo{
-    padding-right: 50px;
     font-family: var(--font-padrao);
 }
 
@@ -102,8 +99,8 @@ section > nav ul li a:hover{
     height: 164px;
 }
 
-.btn-social{
-    padding-left: 50px;
+.btn-social > span{
+    color:white;
 }
 
 .btn-social > a{
@@ -116,7 +113,7 @@ section > nav ul li a:hover{
 
 main{
     width: 100vw; /*Viewport(Tela) largura*/
-    height: 80vh; /*Viewport(Tela) altura*/
+    height: 90vh; /*Viewport(Tela) altura*/
     display: flex; /*Deixou lado a lado as divs do lado direito e esquerdo*/
     justify-content: center; /* Deixou as divs centralizadas no eixo X*/
     align-items: center; /* Deixou as divs centralizadas no eixo Y*/
