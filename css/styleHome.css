@@ -108,6 +108,62 @@ section > nav ul li a:hover{
     text-decoration: none;
 }
 
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 720px){
+    .hamburguer{
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        background-color: var(--cor2);
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+
+    .drop{
+        display: none;
+    }
+    
+}
+
 
 /*------------- INICIO DAS CONFIGURAÇÕES CORPO -------------*/
 
