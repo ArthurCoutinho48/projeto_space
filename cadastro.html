@@ -54,17 +54,33 @@
 
                 <div class="textfielde"> <!--Campo de Texto-->
                     <label for="cel">Telefone celular</label>
-                    <input type="text" placeholder="(+55)XX-XXXXXXXX" name="cel" required="">
+                    <input type="text" placeholder="(+55)XX-XXXXXXXXX" name="telefone" id="idTelefone" 
+                    onkeydown="ajustaTelefone(this)"
+                    onkeypress="ajustaTelefone(this)" 
+                    onkeyup="ajustaTelefone(this)"
+                    maxlength="15" required >
+                    <script src="c:\Users\Lucas\Documents\GitHub\projeto_space\js\telefone.js"></script>
                 </div>
 
                 <div class="textfielde"> <!--Campo de Texto-->
                     <label for="fixcel">Telefone fixo</label>
-                    <input type="text" placeholder="Insira o seu telefone fixo" name="fixcel" required="">
+                    <input type="text" placeholder="(+55)XX-XXXXXXXX" name="telefone" id="idTelefone" 
+                    onkeydown="ajustaTelefone(this)"
+                    onkeypress="ajustaTelefone(this)" 
+                    onkeyup="ajustaTelefone(this)"
+                    maxlength="15" required >
+                    <script src="c:\Users\Lucas\Documents\GitHub\projeto_space\js\telefone.js"></script>
                 </div>
 
                 <div class="textfielde"> <!--Campo de Texto-->
                     <label for="cpf">CPF</label>
-                    <input type="text" placeholder="Insira o CPF" name="cpf" required="">
+                    <input type="text" placeholder="Insira o CPF" name="documento" id="idDocumento" onkeydown="ajustaCpf(this)" 
+                    onkeyup="ajustaCpf(this)"
+                    onkeydown="ajustaCpf(this)" 
+                    onblur="validarCPF(this)"
+                    required placeholder="Digite seu documento"
+                    maxlength="14" required>
+                    <script src="c:\Users\Lucas\Documents\GitHub\projeto_space\js\cpf.js"></script>
                 </div>
 
                 <div class="textfielde"> <!--Campo de Texto-->
@@ -99,7 +115,10 @@
 
                 <div class="textfielde"> <!--Campo de Texto-->
                     <label for="cep">CEP</label>
-                    <input type="text" placeholder="Insira seu CEP" name="cep" required="">
+                    <input type="text" placeholder="Insira seu CEP"  name="cep" id="idCep" 
+                    onblur="preencherEndereco(this)" 
+                    required placeholder="Insira seu CEP">
+                    <script src="c:\Users\Lucas\Documents\GitHub\projeto_space\js\cep.js"></script>
                 </div>
 
                 <div class="textfielde"> <!--Campo de Texto-->
