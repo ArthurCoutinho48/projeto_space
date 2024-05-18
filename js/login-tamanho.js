@@ -1,4 +1,4 @@
-function validarLogin(idlogin) {
+function validarLogin(login) {
   var regex = /^[a-zA-Z]{6}$/;
   if (regex.test(login)) {
       return true;
