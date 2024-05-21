@@ -67,7 +67,7 @@ section > nav ul li a{
     color: white;
     padding: 10px 30px;
     font-family: var(--font-padrao);
-    text-decoration: none;
+    text-decoration:none;
     letter-spacing: 0.5px;
     display: block;
     transition: .2s;
@@ -176,4 +176,37 @@ main{
     margin: auto;
     margin-bottom: 30px;
     border-radius: 0px 0px 5px 5px;
+}
+
+
+/* produtos
+------------------------------------------- */
+.produtos{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.prod{
+    max-width:350px;
+    margin: 0 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.51);
+    border-radius: 0px 0px 5px 5px;
+    /* border: 1px solid gray; */
+   display: flex;
+   align-items: center;
+
+}
+
+.prod a{
+    width:100%;
+   
+}
+
+
+
+.prod img{
+   border-radius: 0px 0px 5px 5px;
+   padding: 5px;
+   margin: 0 auto;
 }
