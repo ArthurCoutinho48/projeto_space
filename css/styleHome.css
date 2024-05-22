@@ -210,3 +210,70 @@ main{
    padding: 5px;
    margin: 0 auto;
 }
+
+
+
+/* rodapé
+------------------------------------ */
+footer{
+    background-color: var(--cor2);
+    margin-top: 2em;
+}
+
+.rodape div{
+    /* display: flex; */
+}
+
+.rodape{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+.rodape h3{
+    color: white;
+    padding: 10px 30px;
+    font-family: var(--font-padrao);
+    letter-spacing: 0.5px;
+}
+
+.rodape ul{
+    list-style: none;
+}
+
+
+.rodape ul a{
+    color: white;
+    padding: 10px 30px;
+    font-family: var(--font-padrao);
+    text-decoration:none;
+    letter-spacing: 0.5px;
+    display: block;
+    transition: 0.2ms;
+    
+}
+
+
+.recursos{
+    display: flex;
+   
+}
+
+.recursos div{
+   margin: 0 5em;
+   
+}
+
+.recursos ul li a:hover{
+    background-color: var(--cor3);
+}
+
+
+.redes-socias ul{
+    display: flex;
+    justify-content: center;
+}
+
+.redes-socias ul a{
+    padding: 10px 10px;
+}
