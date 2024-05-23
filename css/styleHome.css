@@ -220,9 +220,6 @@ footer{
     margin-top: 2em;
 }
 
-.rodape div{
-    /* display: flex; */
-}
 
 .rodape{
     display: flex;
@@ -276,4 +273,61 @@ footer{
 
 .redes-socias ul a{
     padding: 10px 10px;
+}
+
+
+
+/* config Slick Slider
+------------------------------------------- */
+
+
+button.slick-prev{
+    font-size: 0px;
+    border: none;
+    width: 25px;
+    height: 50px;
+    margin-left:5px ;
+    background-color: transparent;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    top: 43%;
+    background: url(../imagens/angle-left-solid.svg) no-repeat;
+}
+
+
+button.slick-next{
+    font-size: 0px;
+    border: none;
+    width: 25px;
+    height: 50px;
+    margin-right:5px ;
+    background-color: transparent;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    background: url(../imagens/angle-right-solid.svg) no-repeat;
+    right: 0;
+    top: 43%;
+}
+
+ul.slick-dots{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+ul.slick-dots li button{
+    display: none;
+}
+
+ul.slick-dots li{
+    display: inline-block;
+    font-size: 0px;
+    border: 3px solid var(--cor2);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 5px 5px;
+    
 }
