@@ -71,6 +71,7 @@ section > nav ul li a{
     letter-spacing: 0.5px;
     display: block;
     transition: .2s;
+    
 }
 
 section > nav ul li a:hover{
@@ -79,6 +80,7 @@ section > nav ul li a:hover{
 
 .drop-hover{
     position: relative;
+    
 }
 
 .drop-hover .drop{
@@ -88,10 +90,12 @@ section > nav ul li a:hover{
     height: 0;
     overflow: hidden;
     transition: .5s;
+    
 }
 
 .drop-hover .drop a{
     padding: 10px;
+    
 }
 
 .drop-hover:hover .drop{
@@ -121,48 +125,10 @@ section > nav ul li a:hover{
     margin: 5px auto;
     background: #fff;
     transition: all 0.3s ease-in-out;
-}
-
-@media (max-width: 720px){
-    .hamburguer{
-        display: block;
-    }
-
-    .hamburguer.active .bar:nth-child(2){
-        opacity: 0;
-    }
-
-    .hamburguer.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburguer.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu{
-        position: fixed;
-        left: -100%;
-        background-color: var(--cor2);
-        text-align: center;
-        flex-direction: column;
-        width: 100%;
-        transition: 0.3s;
-    }
-
-    .nav-item{
-        margin: 16px 0;
-    }
-
-    .nav-menu.active{
-        left: 0;
-    }
-
-    .drop{
-        display: none;
-    }
     
 }
+
+
 
 
 /*------------- INICIO DAS CONFIGURAÇÕES CORPO -------------*/
@@ -176,6 +142,7 @@ main{
     margin: auto;
     margin-bottom: 30px;
     border-radius: 0px 0px 5px 5px;
+    
 }
 
 
@@ -183,7 +150,9 @@ main{
 ------------------------------------------- */
 .produtos{
     display: flex;
+    margin: 0 auto;
     justify-content: space-around;
+    max-width: 95%;
     
 }
 
@@ -192,15 +161,23 @@ main{
     margin: 0 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.51);
     border-radius: 0px 0px 5px 5px;
-    /* border: 1px solid gray; */
    display: flex;
    align-items: center;
+   text-align: center;
 
 }
 
 .prod a{
     width:100%;
-   
+    margin: 0 auto; 
+    text-decoration: none;
+    color: var(--cor2); 
+    transition: 0.2s ease-in-out;
+}
+
+.prod a:hover{
+    color: var(--cor3);
+    
 }
 
 
@@ -208,8 +185,9 @@ main{
 .prod img{
    border-radius: 0px 0px 5px 5px;
    padding: 5px;
-   margin: 0 auto;
+   
 }
+
 
 
 
@@ -292,12 +270,12 @@ button.slick-prev{
     z-index: 1;
     cursor: pointer;
     top: 43%;
-    background: url(../imagens/angle-left-solid.svg) no-repeat;
+    background: url(/imagens/angle-left-solid.svg) no-repeat;
 }
 
 
 button.slick-next{
-    font-size: 0px;
+    font-size: 0;
     border: none;
     width: 25px;
     height: 50px;
@@ -329,5 +307,55 @@ ul.slick-dots li{
     width: 20px;
     height: 20px;
     margin: 5px 5px;
+    
+}
+
+
+
+/* respondividade
+----------------------------------- */
+@media (max-width: 720px){
+    .hamburguer{
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        background-color: var(--cor2);
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+        z-index: 1;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+
+    .drop{
+        display: none;
+    }
+
+    .recursos{
+        flex-direction: column;
+    }
     
 }
