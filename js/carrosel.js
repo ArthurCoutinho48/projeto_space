@@ -1,11 +1,20 @@
 
-$('.carrosel').slick({
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    adaptiveHeight: true,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  });
+var radio = document.querySelector('.manual-btn')
+var cont = 1
+
+document.getElementById('radio1').checked = true
+
+setInterval(() => {
+  proximaImg()
+}, 5000)
+
+function proximaImg(){
+  cont++
+
+  if(cont > 3){
+    cont = 1
+  }
+
+  document.getElementById('radio'+cont).checked = true
+
+}
