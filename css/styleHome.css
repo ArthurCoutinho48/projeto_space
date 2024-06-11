@@ -100,6 +100,7 @@ section > nav ul li a:hover{
 
 .drop-hover:hover .drop{
     height: 164px;
+    z-index: 10;
 }
 
 .btn-social > span{

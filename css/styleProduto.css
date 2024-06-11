@@ -13,16 +13,18 @@
     --font-padrao: 'Bebas Neue', Arial;
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: var(--font-padrao);
-    width: 100vw; /*Viewport(Tela) largura*/
-    height: 100vh; /*Viewport(Tela) altura*/
+    width: 100vw;
+    /*Viewport(Tela) largura*/
+    height: 100vh;
+    /*Viewport(Tela) altura*/
     display: block;
     justify-content: center;
     align-items: center;
@@ -30,12 +32,12 @@ body{
 
 /*------------- INICIO DAS CONFIGURAÇÕES MENU -------------*/
 
-header{
+header {
     width: 100vw;
     background-color: var(--cor2);
 }
 
-section.header{
+section.header {
     min-width: 300px;
     max-width: 1000px;
     margin: auto;
@@ -47,27 +49,27 @@ section.header{
     background-color: var(--cor2);
 }
 
-.logotipo{
+.logotipo {
     padding-right: 50px;
     font-family: var(--font-padrao);
 }
 
-.logotipo img{
+.logotipo img {
     max-width: 100px;
 }
 
-.logotipo > a img{
+.logotipo>a img {
     color: white;
 }
 
-section > nav ul {
+section>nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
     list-style-type: none;
 }
 
-section > nav ul li a{
+section>nav ul li a {
     color: white;
     padding: 10px 30px;
     font-family: var(--font-padrao);
@@ -77,15 +79,15 @@ section > nav ul li a{
     transition: .2s;
 }
 
-section > nav ul li a:hover{
+section>nav ul li a:hover {
     background-color: var(--cor3);
 }
 
-.drop-hover{
+.drop-hover {
     position: relative;
 }
 
-.drop-hover .drop{
+.drop-hover .drop {
     position: absolute;
     background-color: var(--cor2);
     width: 100%;
@@ -94,71 +96,99 @@ section > nav ul li a:hover{
     transition: .5s;
 }
 
-.drop-hover .drop a{
+.drop-hover .drop a {
     padding: 10px;
 }
 
-.drop-hover:hover .drop{
+.drop-hover:hover .drop {
     height: 164px;
 }
 
-.btn-social{
+.btn-social {
     padding-left: 50px;
 }
 
-.btn-social > a{
+.btn-social>a {
     color: grey;
     font-family: var(--font-padrao);
     text-decoration: none;
 }
 
-/*------------- INICIO DAS CONFIGURAÇÕES LOGIN -------------*/
 
-main{
-    width: 100vw; /*Viewport(Tela) largura*/
-    height: 80vh; /*Viewport(Tela) altura*/
-    display: flex; /*Deixou lado a lado as divs do lado direito e esquerdo*/
-    justify-content: center; /* Deixou as divs centralizadas no eixo X*/
-    align-items: center; /* Deixou as divs centralizadas no eixo Y*/
-    background-color: white; /*Cor de fundo*/
+.container {
+    display: flex;
 }
 
-.card-login{
+.box {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+}
+
+
+/*------------- INICIO DAS CONFIGURAÇÕES LOGIN -------------*/
+
+main {
+    width: 100vw;
+    /*Viewport(Tela) largura*/
+    height: 80vh;
+    /*Viewport(Tela) altura*/
+    display: flex;
+    /*Deixou lado a lado as divs do lado direito e esquerdo*/
+    justify-content: center;
+    /* Deixou as divs centralizadas no eixo X*/
+    align-items: center;
+    /* Deixou as divs centralizadas no eixo Y*/
+    background-color: white;
+    /*Cor de fundo*/
+}
+
+.card-login {
     width: 400px;
     margin: center;
     display: flex;
-    justify-content: center; /* Deixou a div centralizadas no eixo X*/
-    align-items: center; /* Deixou as div centralizada no eixo Y*/
-    flex-direction: column; /*Deixa o conteudo um embaixo do outro*/
-    padding: 35px 35px; /*Bordas internas da caixa*/
-    background-color: var(--cor2); /*Cor do caixa*/
-    border-radius: 20px; /*Borda da caixa*/
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.500); /*Sombreamento*/
+    justify-content: center;
+    /* Deixou a div centralizadas no eixo X*/
+    align-items: center;
+    /* Deixou as div centralizada no eixo Y*/
+    flex-direction: column;
+    /*Deixa o conteudo um embaixo do outro*/
+    padding: 35px 35px;
+    /*Bordas internas da caixa*/
+    background-color: var(--cor2);
+    /*Cor do caixa*/
+    border-radius: 20px;
+    /*Borda da caixa*/
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.500);
+    /*Sombreamento*/
 }
 
-.logo-cadastro{
+.logo-cadastro {
     width: 100px;
     display: flex;
-    justify-content: center; /* Deixou a div centralizadas no eixo X*/
-    align-items: center; /* Deixou as div centralizada no eixo Y*/
+    justify-content: center;
+    /* Deixou a div centralizadas no eixo X*/
+    align-items: center;
+    /* Deixou as div centralizada no eixo Y*/
 }
 
-.textfielde{
-    width: 100%; /*Pegou 100% da viewport*/
+.textfielde {
+    width: 100%;
+    /*Pegou 100% da viewport*/
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-direction: column; 
+    flex-direction: column;
     margin: 10px 0px;
 }
 
-.textfielde > label{
+.textfielde>label {
     color: white;
     margin-bottom: 10px;
     letter-spacing: 0.5px;
 }
 
-.textfielde > input{
+.textfielde>input {
     width: 100%;
     border: none;
     border-radius: 10px;
@@ -167,41 +197,46 @@ main{
     color: white;
     font-size: 12px;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.150);
-    outline: none; /*Retirou o contorno da caixa do input*/
-    box-sizing: border-box; /*A caixa do input não passara da bordar da caixa principal*/
+    outline: none;
+    /*Retirou o contorno da caixa do input*/
+    box-sizing: border-box;
+    /*A caixa do input não passara da bordar da caixa principal*/
 }
 
-.textfielde > input::placeholder{
-    color: rgba(255, 255, 255, 0.200); /*Cor da palavra do input*/
+.textfielde>input::placeholder {
+    color: rgba(255, 255, 255, 0.200);
+    /*Cor da palavra do input*/
 }
 
-.btn-login{
+.btn-login {
     width: 100%;
     padding: 16px 0px;
     margin: 25px;
     border: none;
     border-radius: 8px;
     outline: none;
-    text-transform: uppercase; /*Transformou todas as letras em maisculas*/
+    text-transform: uppercase;
+    /*Transformou todas as letras em maisculas*/
     font-weight: 800;
     letter-spacing: 3px;
-    background-color: white; /*Cor da caixa do entrar*/
+    background-color: white;
+    /*Cor da caixa do entrar*/
     color: var(--cor2);
     cursor: pointer;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.150);
 }
 
-.cadastro-senha{
+.cadastro-senha {
     color: white;
     letter-spacing: 0.5px;
 }
 
-div > label > a{
+div>label>a {
     color: var(--cor3);
 }
 
-@media only screen and (max-width: 950px){
-    .card-login{
+@media only screen and (max-width: 950px) {
+    .card-login {
         width: 400px;
     }
 }
