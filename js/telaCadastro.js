@@ -115,7 +115,11 @@ function checkInputLogin(){
 
     if(loginValue === ""){
         erroInput(login, "faz direito")
-    } else {
+    } else if(loginValue.length < 6){
+        erroInput(login, "login deve conter 6 caracteres")
+    }else if(loginValue.length >6) {
+        erroInput(login, "login deve conter 6 caracteres")
+    }else{
         const formItem = login.parentElement;
         formItem.className = "textfielde"
     }
