@@ -14,10 +14,10 @@ function preencherEndereco(v) {
         })
         .then(function(data) {
           if (!data.erro) {
-            document.getElementById('idRua').value = data.logradouro;
-            document.getElementById('idBairro').value =data.bairro;
-            document.getElementById('idBairro').value =data.bairro;
-            document.getElementById('idUf').value = data.localidade+'-'+data.uf;
+            document.getElementById('logradouro').value = data.logradouro;
+            document.getElementById('bairro').value =data.bairro;
+            document.getElementById('cidade').value = data.localidade;
+            document.getElementById('uf').value = data.uf;
         }
     })
         .catch(function(error) {

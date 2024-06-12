@@ -20,7 +20,29 @@ const cidade = document.getElementById("cidade");
 form.addEventListener("submit",(event) => {
     event.preventDefault(); //previne o comportamento padrão do submit
 
+    // const username = document.getElementById("username").value;
+
     checkForm();
+
+    const formCadastro = {
+        username: username.value,
+        email: email.value,
+        login: login.value,
+        senha: senha.value,
+        confirmSenha: confirmSenha.value,
+        nasc: nasc.value,
+        matName: matName.value,
+        celular: celular.value,
+        telefone: telefone.value,
+        uf: uf.value,
+        logradouro: logradouro.value,
+        numero: numero.value,
+        bairro: bairro.value,
+        cep: cep.value,
+        cidade: cidade.value,
+    };
+
+    localStorage.setItem('formCadastro', JSON.stringify(formCadastro))
 
 })
 
@@ -314,3 +336,4 @@ function erroInput(input, message){
 
     formItem.className = "textfielde error"
 }
+
