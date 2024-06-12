@@ -65,187 +65,243 @@
     </style>
 </head>
 
-<header>
 
-    <section class="header">
 
-        <div class="logotipo">
-            <a href="index.html"><img src="imagens/logo-oficial/logoRetangular2.png" alt="Logo Oficial"></a>
-        </div>
+<body>
 
-        <nav>
+    <header>
 
-            <div class="hamburguer">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        <section class="header">
+
+            <div class="logotipo">
+                <a href="index.html"><img src="" alt="Logo Oficial"></a>
             </div>
 
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#">Destaques</a></li>
-                <li class="drop-hover nav-item"><a href="#">Feminino</a>
-                    <div class="drop">
-                        <a href="#">Nike</a>
-                        <a href="#">Adidas</a>
-                        <a href="#">Puma</a>
-                        <a href="#">Kappa</a>
-                    </div>
-                </li>
-                <li class="drop-hover nav-item"><a href="#">Masculino</a>
-                    <div class="drop">
-                        <a href="produto1 - Nike Air Force.html">Nike</a>
+            <nav>
+
+                <div class="hamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#">Destaques</a></li>
+                    <li class="drop-hover nav-item"><a href="#">Feminino</a>
+                        <div class="drop">
+                            <a href="#">Nike</a>
+                            <a href="#">Adidas</a>
+                            <a href="#">Puma</a>
+                            <a href="#">Kappa</a>
+                        </div>
+                    </li>
+                    <li class="drop-hover nav-item"><a href="#">Masculino</a>
+                        <div class="drop">
+                            <a href="produto1 - Nike Air Force.html">Nike</a>
                             <a href="produto2 - Adidas Superstar.html">Adidas</a>
                             <a href="produto3 - Puma Smash V2.html">Puma</a>
                             <a href="produto4 - Kappa Mantua.html">Kappa</a>
-                    </div>
-                </li>
-                <li><a href="sobre nós.html">Sobre nós</a></li>
-            </ul>
-        </nav>
+                        </div>
+                    </li>
+                    <li><a href="sobre nós.html">Sobre nós</a></li>
+                </ul>
+            </nav>
 
-        <div class="btn-social">
-            <a href="login.html">Entrar</a>
-            <span>|</span>
-            <a href="cadastro.html">Cadastre-se</a>
-        </div>
-    </section>
+            <div class="btn-social">
+                <a href="login.html">Entrar</a>
+                <span>|</span>
+                <a href="cadastro.html">Cadastre-se</a>
+            </div>
+        </section>
 
-</header>
+    </header>
 
-<body>
-    <div class="container">
-
-        <body>
-            <center>
-                <img src="imagens/logo-oficial/apple-touch-icon.png" alt="logo">
-            </center>
-        </body>
+    <form action="" id="form">
 
 
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="uname">Nome Completo</label>
-            <input type="text" placeholder="Insira o Nome Completo" name="uname" minlength="15" maxlength="80" required="">
-        </div>
+        <div class="container">
 
-        <div class="textfielde"> <!--Campo de Texto-->
+
+
+            <body>
+                <center>
+                    <img src="imagens/logo-oficial/apple-touch-icon.png" alt="logo">
+                </center>
+            </body>
+
+
+
+
+
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="uname">Nome Completo</label>
+                <input type="text" id="username" placeholder="Insira o Nome Completo">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div>
+
+            <div class="textfielde"> <!--Campo de Texto-->
                 <label for="cpf">CPF</label>
-                <input type="text" placeholder="Insira o CPF" name="documento" id="idDocumento" onkeydown="ajustaCpf(this)"
-                    onkeyup="ajustaCpf(this)" onkeydown="ajustaCpf(this)" onblur="validarCPF(this)" required
-                    placeholder="Digite seu documento" maxlength="14" required>
-                <script src="js/cpf.js"></script>
+                <input type="text" placeholder="Insira o CPF" id="cpf" name="documento" id="idDocumento"
+                    onkeydown="ajustaCpf(this)" onkeyup="ajustaCpf(this)" onkeydown="ajustaCpf(this)"
+                    onblur="validarCPF(this)">
+                <a href="">Aqui vai a msg de erro....</a>
+
+            </div>
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="gender">Sexo</label>
+                <select name="gender">
+                    <option value="male">Masculino</option>
+                    <option value="female">Feminino</option>
+                    <option value="other">Outro</option>
+                </select>
+            </div>
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Insira o Email" name="email">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div>
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="login">Login</label>
+                <input type="text" placeholder="Insira o Login" name="login" id="login">
+                <a href="">Aqui vai a msg de erro....</a>
+
+            </div>
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="password">Senha</label>
+                <input type="password" id="senha" placeholder="Insira a Senha" name="password">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div>
+
+            <div class=" textfielde"> <!--Campo de Texto-->
+                <label for="repassword">Repetir Senha</label>
+                <input type="password" id="confirmSenha" placeholder="Repita a Senha" name="repassword">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div>
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="dob">Data de Nascimento</label>
+                <input type="date" id="nasc" name="dob">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div>
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="matname">Nome Materno</label>
+                <input type="text" id="matName" placeholder="Insira o Nome Completo de sua mãe" name="matname">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div>
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="cel">Telefone celular</label>
+                <input type="text" placeholder="(+55)XX-XXXXXXXX" name="cel" id="celular"
+                    onkeydown="ajustaTelefone(this)" onkeyup="ajustaTelefone(this)" onkeydown="ajustaTelefone(this)">
+                <a href="">Aqui vai a msg de erro....</a>
+
+            </div>
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="fixcel">Telefone fixo</label>
+                <input type="text" placeholder="(+55)XX-XXXXXXXX" name="telefone" id="telefone"
+                    onkeydown="ajustaTelefone(this)" onkeyup="ajustaTelefone(this)" onkeydown="ajustaTelefone(this)">
+                <a href="">Aqui vai a msg de erro....</a>
+
+            </div>
+
+
         </div>
 
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="gender">Sexo</label>
-            <select name="gender">
-                <option value="male">Masculino</option>
-                <option value="female">Feminino</option>
-                <option value="other">Outro</option>
-            </select>
+
+        <br>
+
+
+        <div class="container">
+
+            <!-- inicio cep -->
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="cep">CEP</label>
+                <input type="text" placeholder="Insira seu CEP" name="cep" id="cep" placeholder="Insira seu CEP"
+                    onblur="preencherEndereco(this)">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div>
+            <!-- fim cep -->
+
+            <!-- inicio bairro -->
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="end">Bairro</label>
+                <input type="text" placeholder="Insira o seu bairro" name="end" id="bairro"
+                onblur="checkInputBairro(this)">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div>
+            <!-- fim bairro -->
+
+
+            <!-- <div class="textfielde"> Campo de Texto -->
+            <!-- <label for="end">Tipo de Logradouro</label>
+                <input type="text" placeholder="Insira seu Endereço Completo" name="end" id="logradouro">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div> -->
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="end">Logradouro</label>
+                <input type="text" placeholder="Insira seu logradouro" name="end" id="logradouro">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div>
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="end">Número</label>
+                <input type="text" placeholder="Insira o número de seu endereço" name="end" id="numero">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div>
+
+            <!-- inicio UF -->
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="end">UF</label>
+                <input type="text" placeholder="UF" name="end" id="uf">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div>
+
+
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="end">Complemento (se houver)</label>
+                <input type="text" placeholder="Insira o complemento de seu endereço" name="end" >
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- <div class="textfielde"> Campo de Texto -->
+            <!-- <label for="bairro">Bairro</label>
+            <input type="text" placeholder="Insira seu Bairro" name="bairro" >
+            <a href="">Aqui vai a msg de erro....</a>
+        </div> -->
+
+            <div class="textfielde"> <!--Campo de Texto-->
+                <label for="cidade">Cidade</label>
+                <input type="text" placeholder="Insira sua Cidade" name="cidade" id="cidade">
+                <a href="">Aqui vai a msg de erro....</a>
+            </div>
+
+            <button class="btn-login" type="submit" nane="entrar" id="Identrar">Entrar</button>
+
+
         </div>
 
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="email">Email</label>
-            <input type="text" placeholder="Insira o Email" name="email" required="">
-        </div>
+    </form>
 
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="login">Login</label>
-            <input type="text" placeholder="Insira o Login" name="login" id="login" required="">
-            <script src="js/login-tamanho.js"></script>
-        </div>
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="password">Senha</label>
-            <input type="text" placeholder="Insira a Senha" name="password" required="">
-        </div>
-
-        <div class=" textfielde"> <!--Campo de Texto-->
-            <label for="repassword">Repetir Senha</label>
-            <input type="text" placeholder="Repita a Senha" name="repassword" required="">
-        </div>
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="dob">Data de Nascimento</label>
-            <input type="date" name="dob" required="">
-        </div>
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="matname">Nome Materno</label>
-            <input type="text" placeholder="Insira o Nome Completo de sua mãe" name="matname" required="">
-        </div>
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="cel">Telefone celular</label>
-            <input type="text" placeholder="(+55)XX-XXXXXXXX" name="telefone" id="idTelefone"
-                onkeydown="ajustaTelefone(this)" onkeypress="ajustaTelefone(this)" onkeyup="ajustaTelefone(this)"
-                maxlength="15" required>
-            <script src="js/telefone.js"></script>
-        </div>
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="fixcel">Telefone fixo</label>
-            <input type="text" placeholder="(+55)XX-XXXXXXXX" name="telefone" id="idTelefone"
-                onkeydown="ajustaTelefone(this)" onkeypress="ajustaTelefone(this)" onkeyup="ajustaTelefone(this)"
-                maxlength="15" required>
-            <script src="js/telefone.js"></script>
-        </div>
-
-
-    </div>
-
-
-    <br>
-
-
-    <div class="container">
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="end">Tipo de Logradouro</label>
-            <input type="text" placeholder="Insira seu Endereço Completo" name="end" required="">
-        </div>
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="end">Logradouro</label>
-            <input type="text" placeholder="Insira seu logradouro" name="end" required="">
-        </div>
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="end">Número</label>
-            <input type="text" placeholder="Insira o número de seu endereço" name="end" required="">
-        </div>
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="end">Complemento (se houver)</label>
-            <input type="text" placeholder="Insira o complemento de seu endereço" name="end" required="">
-        </div>
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="end">Bairro</label>
-            <input type="text" placeholder="Insira o seu bairro" name="end" required="">
-        </div>
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="cep">CEP</label>
-            <input type="text" placeholder="Insira seu CEP" name="cep" id="idCep" onblur="preencherEndereco(this)"
-                required placeholder="Insira seu CEP">
-            <script src="js/cep.js"></script>
-        </div>
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="bairro">Bairro</label>
-            <input type="text" placeholder="Insira seu Bairro" name="bairro" required="">
-        </div>
-
-        <div class="textfielde"> <!--Campo de Texto-->
-            <label for="town">Cidade</label>
-            <input type="text" placeholder="Insira sua Cidade" name="town" required="">
-        </div>
-
-        <button class="btn-login" type="submit" nane="entrar" id="Identrar">Entrar</button>
-
-    </div>
-
+    <script src="js/telaCadastro.js"></script>
+    <script src="js/cpf.js"></script>
+    <script src="js/telefone.js"></script>
+    <script src="js/cep.js"></script>
 </body>
 
 </html>
