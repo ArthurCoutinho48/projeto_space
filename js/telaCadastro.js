@@ -20,8 +20,6 @@ const cidade = document.getElementById("cidade");
 form.addEventListener("submit",(event) => {
     event.preventDefault(); //previne o comportamento padrão do submit
 
-    // const username = document.getElementById("username").value;
-
     checkForm();
 
     const formCadastro = {
@@ -43,6 +41,10 @@ form.addEventListener("submit",(event) => {
     };
 
     localStorage.setItem('formCadastro', JSON.stringify(formCadastro))
+
+
+    window.location.href = 'http://127.0.0.1:5502/login.html'
+
 
 })
 
@@ -167,9 +169,9 @@ function checkInputConfirmSenha(){
 
 
     if(confirmSenhaValue === ""){
-        erroInput(confirmSenha, "A senha é obrigatória")
+        erroInput(confirmSenha, "confirme a senha")
     }else if(confirmSenhaValue !== senhaValue ){
-        erroInput(confirmSenha, "senha incorreta")
+        erroInput(confirmSenha, "as senhas não correspondem")
     }else{
         const formItem = confirmSenha.parentElement
         formItem.className = "textfielde"
