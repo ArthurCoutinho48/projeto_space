@@ -1,4 +1,16 @@
-var nomeUsuario = "Nome do Usuário"; // Substitua isso pelo método que você usa para obter o nome do usuário
+// Quando o usuário submeter o formulário de login
+document.getElementById('loginForm').onsubmit = function(e) {
+    e.preventDefault();
 
-// Agora, você pode definir este nome de usuário em algum elemento HTML
-document.getElementById("nomeUsuario").textContent=nomeUsuario;
+    // Obtenha o nome de usuário do localStorage
+    var nomeUsuario = localStorage.getItem('nomeUsuario');
+
+    // Envie o nome do usuário para o servidor usando AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'salvarNomeUsuario.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send('nomeUsuario=' + nomeUsuario);
+
+    // Redirecione para a página principal após o envio
+    window.location.href = 'paginaPrincipal.php';
+};
