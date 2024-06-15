@@ -115,7 +115,7 @@
 
     </header>
 
-    <form action="" id="form">
+    <form action="" id="form" onsubmit="cadastrar(event)">
 
 
         <div class="container">
@@ -135,22 +135,23 @@
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="uname">Nome Completo</label>
-                <input type="text" id="username" placeholder="Insira o Nome Completo">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="text" id="username" placeholder="Insira o Nome Completo" onkeyup="validarNome()" required>
+                <a href="" id="errorUsername"></a>
+                 <!-- <div class="msg-error"></div> -->
             </div>
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="cpf">CPF</label>
                 <input type="text" placeholder="Insira o CPF" id="cpf" name="documento" id="idDocumento"
                     onkeydown="ajustaCpf(this)" onkeyup="ajustaCpf(this)" onkeydown="ajustaCpf(this)"
-                    onblur="validarCPF(this)">
-                <a href="">Aqui vai a msg de erro....</a>
+                    onblur="validarCPF(this)" required>
+                <a href="" id="erroCpf"></a>
 
             </div>
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="gender">Sexo</label>
-                <select name="gender" id="genero">
+                <select name="gender" required>
                     <option value="male">Selecione</option>
                     <option value="male">Masculino</option>
                     <option value="female">Feminino</option>
@@ -160,54 +161,54 @@
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="email">Email</label>
-                <input type="text" id="email" placeholder="Insira o Email" name="email">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="text" id="email" placeholder="Insira o Email" name="email" onkeyup="validarEmail()" required maxlength="80" minlength="15">
+                <a href="" id="errorEmail"></a>
             </div>
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="login">Login</label>
-                <input type="text" placeholder="Insira o Login" name="login" id="login">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="text" placeholder="Insira o Login" name="login" id="login" onkeyup="validarLogin()" required>
+                <a href="" id="errorLogin"></a>
 
             </div>
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="password">Senha</label>
-                <input type="password" id="senha" placeholder="Insira a Senha" name="password">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="password" id="senha" placeholder="Insira a Senha" name="password" onkeyup="validarSenha()" required>
+                <a href="" id="errorSenha"></a>
             </div>
 
             <div class=" textfielde"> <!--Campo de Texto-->
                 <label for="repassword">Repetir Senha</label>
-                <input type="password" id="confirmSenha" placeholder="Repita a Senha" name="repassword">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="password" id="confirmSenha" placeholder="Repita a Senha" name="repassword" onkeyup="validarConfirmSenha()" required>
+                <a href="" id="errorConfirmSenha"></a>
             </div>
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="dob">Data de Nascimento</label>
-                <input type="date" id="nasc" name="dob">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="date" id="nasc" name="dob" onkeyup="validarNasc()" required>
+                <a href="" id="errorNasc"></a>
             </div>
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="matname">Nome Materno</label>
-                <input type="text" id="matName" placeholder="Insira o Nome Completo de sua mãe" name="matname">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="text" id="matName" placeholder="Insira o Nome Completo de sua mãe" name="matname" onkeyup="validarMatNome()" required>
+                <a href="" id="errorMatName"></a>
             </div>
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="cel">Telefone celular</label>
-                <input type="text" placeholder="(+55)XX-XXXXXXXX" name="cel" id="celular"
-                    onkeydown="ajustaTelefone(this)" onkeyup="ajustaTelefone(this)" onkeydown="ajustaTelefone(this)">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="text" placeholder="(+55)XXXXX-XXXXX" name="cel" id="celular"
+                    onkeydown="ajustaTelefone(this)" onkeyup="ajustaTelefone(this)" onkeydown="ajustaTelefone(this)" onblur="validarCelular()" required >
+                <a href="" id="errorCelular"></a>
 
             </div>
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="fixcel">Telefone fixo</label>
-                <input type="text" placeholder="(+55)XX-XXXXXXXX" name="telefone" id="telefone"
-                    onkeydown="ajustaTelefone(this)" onkeyup="ajustaTelefone(this)" onkeydown="ajustaTelefone(this)">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="text" placeholder="(+55)XXXXX-XXXXX" name="telefone" id="telefone"
+                    onkeydown="ajustaTelefone(this)" onkeyup="ajustaTelefone(this)" onkeydown="ajustaTelefone(this)" onblur="validarTelefone()" required>
+                <a href="" id="errorTelefone"></a>
 
             </div>
 
@@ -223,61 +224,57 @@
             <!-- inicio cep -->
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="cep">CEP</label>
-                <input type="text" placeholder="Insira seu CEP" name="cep" id="cep" placeholder="Insira seu CEP"
-                    onblur="preencherEndereco(this)">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="text" placeholder="Insira seu CEP" name="cep" id="cep" placeholder="Insira seu CEP" onkeyup="validarCep() "
+                    onblur="preencherEndereco(this)"required>
+                <a href="" id="errorCep"></a>
             </div>
             <!-- fim cep -->
 
             <!-- inicio bairro -->
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="end">Bairro</label>
-                <input type="text" placeholder="Insira o seu bairro" name="end" id="bairro"
-                onblur="checkInputBairro(this)">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="text" placeholder="Insira o seu bairro" name="end" id="bairro" onkeyup="validarBairro()"
+                onblur="checkInputBairro(this)" required>
+                <a href="" id="erorrBairro"></a>
             </div>
             <!-- fim bairro -->
 
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="end">Logradouro</label>
-                <input type="text" placeholder="Insira seu logradouro" name="end" id="logradouro">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="text" placeholder="Insira seu logradouro" name="end" id="logradouro" onkeyup="validarLogradouro()" required>
+                <a href="" id="errorLogradouro"></a>
             </div>
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="end">Número</label>
-                <input type="text" placeholder="Insira o número de seu endereço" name="end" id="numero">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="text" placeholder="Insira o número de seu endereço" name="end" id="numero" onkeyup="validarNumero()" required>
+                <a href="" id="errorNumero"></a>
             </div>
 
             <!-- inicio UF -->
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="end">UF</label>
-                <input type="text" placeholder="UF" name="end" id="uf">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="text" placeholder="UF" name="end" id="uf" onkeyup="validarUf()" required>
+                <a href="" id="errorUf"></a>
             </div>
 
 
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="end">Complemento (se houver)</label>
-                <input type="text" placeholder="Insira o complemento de seu endereço" name="end" >
+                <input type="text" placeholder="Insira o complemento de seu endereço" name="end">
 
             </div>
-
 
 
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="cidade">Cidade</label>
-                <input type="text" placeholder="Insira sua Cidade" name="cidade" id="cidade">
-                <a href="">Aqui vai a msg de erro....</a>
+                <input type="text" placeholder="Insira sua Cidade" name="cidade" id="cidade" onkeyup="validarCidade()" required>
+                <a href="" id="errorCidade"></a>
             </div>
 
-            <div class="flex">
-                <button class="btn-login" type="submit" nane="entrar" id="Identrar">Entrar</button>
-            </div>
-            
+            <button class="btn-login" type="submit" nane="entrar" id="Identrar">Entrar</button>
 
 
         </div>

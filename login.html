@@ -60,6 +60,8 @@
 
             <img src="imagens/logo-oficial/android-chrome-192x192.png" alt="Logo" class="logo-cadastro">
 
+            <form action=""></form>
+
             <div class="textfielde"> <!--Campo de Texto-->
                 <label for="usuario">Usuário</label>
                 <input type="text" name="usuario" id="Idusuario" placeholder="Usuário">
@@ -70,7 +72,7 @@
                 <input type="password" name="senha" id="Idsenha" placeholder="Senha">
             </div>
             
-            <button class="btn-login" type="submit" nane="entrar" id="Identrar">Entrar</button>
+            <button class="btn-login" type="submit" nane="entrar" id="Identrar" onclick="conferirUsuario(event)">Entrar</button>
 
             <div class="cadastro-senha">
                 <label for="cadastro">Não tem uma conta? <a href="cadastro.html">Cadastre-se</a> | <a href="recover.html">Esqueceu sua senha?</a></label>
@@ -79,6 +81,6 @@
         </div>
 
     </main>
-
+    <script src="js/telaLogin.js"></script>
 </body>
 </html>
