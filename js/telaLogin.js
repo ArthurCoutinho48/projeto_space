@@ -11,7 +11,7 @@ function conferirUsuario(event){
        
 
         setTimeout(() =>{
-             location.href = 'http://127.0.0.1:5502/cadastro.html'
+             location.href = 'http://127.0.0.1:5502/index.html'
         }, 1000)
 
         let token = Math.random().toString(16).substring(2) 
