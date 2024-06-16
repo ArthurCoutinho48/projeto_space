@@ -250,7 +250,7 @@ if( username.value !=''
    localStorage.setItem('login', login.value);
    localStorage.setItem('senha', senha.value);
 
-window.location = 'http://127.0.0.1:5502/login.html'
+window.location = 'login.html'
 } else {
     alert('preencha todos os campos')
 }
