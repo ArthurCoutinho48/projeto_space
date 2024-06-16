@@ -25,6 +25,7 @@ body{
     display: block;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 /*------------- INICIO DAS CONFIGURAÇÕES MENU -------------*/
@@ -111,6 +112,29 @@ section > nav ul li a:hover{
     color: white;
     font-family: var(--font-padrao);
     text-decoration: none;
+}
+
+.divLogado{
+    padding: 15px;
+    display: none;
+    color: white;
+    font-family: var(--font-padrao);
+    align-items: center;
+}
+
+.divLogado button{
+    margin-left: 15px;
+    border: none;
+    background-color: var(--cor2);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: none;
+    color: #fff;
+}
+
+.divLogado button:hover{
+    color: var(--cor3);
+    scale: 1.1;
 }
 
 .hamburguer{

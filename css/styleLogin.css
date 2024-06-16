@@ -175,6 +175,16 @@ main {
     /* Deixou as div centralizada no eixo Y*/
 }
 
+#msgError{
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
 .textfielde {
     width: 100%;
     /*Pegou 100% da viewport*/
@@ -218,16 +228,8 @@ main {
     position: absolute;
     bottom: -3px;
     left: 0;
-    visibility: hidden;
-}
-
-.textfielde.error input {
-    border-color: red;
-}
-
-.textfielde.error a {
+    display: none;
     color: red;
-    visibility: visible;
 }
 
 .flex{
