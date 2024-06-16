@@ -7,6 +7,8 @@ function conferirUsuario(event){
     var usuario = document.getElementById('Idusuario')
     var senha = document.getElementById('Idsenha')
 
+    let msgError = document.getElementById('msgError')
+
     if(login==usuario.value && pass==senha.value) {
        
 
@@ -18,7 +20,8 @@ function conferirUsuario(event){
         localStorage.setItem('token', token) 
        
     } else {
-        alert('usuario e senha invalidos')
+        msgError.setAttribute('style', 'display:block')
+        msgError.innerHTML = 'Usuário ou Senha inválidos'
         
     }
     
