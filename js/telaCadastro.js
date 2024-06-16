@@ -1,259 +1,341 @@
+const form = document.getElementById("form");
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const login = document.getElementById("login");
+const senha = document.getElementById("senha");
+const confirmSenha = document.getElementById("confirmSenha");
+const nasc = document.getElementById("nasc");
+const matName = document.getElementById("matName");
+const celular = document.getElementById("celular");
+const telefone = document.getElementById("telefone");
 
-function validarNome() {
-    if (username.value.length <= 14) {
-        errorUsername.setAttribute('style', 'display:block')
-        errorUsername.innerHTML = 'Nome Completo no minímo 15 caractereres'
-    } else {
-        errorUsername.setAttribute('style', 'display:none')
-        validUsername = true
+const uf = document.getElementById("uf");
+const logradouro = document.getElementById("logradouro");
+const numero = document.getElementById("numero");
+const bairro = document.getElementById("bairro");
+const cep = document.getElementById("cep");
+const cidade = document.getElementById("cidade");
+
+
+form.addEventListener("submit",(event) => {
+    event.preventDefault(); //previne o comportamento padrão do submit
+
+    checkForm();
+
+    const formCadastro = {
+        username: username.value,
+        email: email.value,
+        login: login.value,
+        senha: senha.value,
+        confirmSenha: confirmSenha.value,
+        nasc: nasc.value,
+        matName: matName.value,
+        celular: celular.value,
+        telefone: telefone.value,
+        uf: uf.value,
+        logradouro: logradouro.value,
+        numero: numero.value,
+        bairro: bairro.value,
+        cep: cep.value,
+        cidade: cidade.value,
+    };
+
+    localStorage.setItem('formCadastro', JSON.stringify(formCadastro))
+
+
+    window.location.href = 'http://127.0.0.1:5502/login.html'
+
+
+})
+
+
+username.addEventListener("blur", () => {
+    checkInputUsername();
+})
+
+
+email.addEventListener("blur", () => {
+    checkInputEmail();
+})
+
+login.addEventListener("blur", () => {
+    checkInputLogin();
+})
+
+senha.addEventListener("blur", () => {
+    checkInputSenha();
+})
+
+confirmSenha.addEventListener("blur", () => {
+    checkInputConfirmSenha();
+})
+
+nasc.addEventListener("blur", () => {
+    checkInputNasc();
+})
+
+matName.addEventListener("blur", () => {
+    checkInputMatName();
+})
+
+celular.addEventListener("blur", () => {
+    checkInputCelular();
+})
+
+telefone.addEventListener("blur", () => {
+    checkInputTelefone();
+})
+
+
+uf.addEventListener("blur", () =>{
+    checkInputUf();
+})
+
+numero.addEventListener("blur", () => {
+    checkInputNumero();
+})
+
+bairro.addEventListener("blur", () => {
+    checkInputBairro();
+})
+
+cep.addEventListener("blur", () => {
+    checkInputCep();
+})
+
+cidade.addEventListener("blur", () => {
+    checkInputCidade();
+})
+
+
+//================ validações ==================
+
+function checkInputUsername(){
+    const usernameValue = username.value;
+
+    if(usernameValue === ""){
+        erroInput(username, "Preencha corretamente")
+    }else{
+        const formItem = username.parentElement;
+        formItem.className = "textfielde"
     }
 }
 
 
-function validarEmail() {
-    if (email.value == '') {
-        errorEmail.setAttribute('style', 'display:block')
-        errorEmail.innerHTML = 'preencha o campo'
-    } else {
-        errorEmail.setAttribute('style', 'display:none')
+
+function checkInputEmail(){
+    const emailValue = email.value;
+
+    if(emailValue === ""){
+        erroInput(email, "faz direito")
+    }else{
+        const formItem = email.parentElement;
+        formItem.className = "textfielde"
+    }
+}
+
+function checkInputLogin(){
+    const loginValue = login.value;
+
+    if(loginValue === ""){
+        erroInput(login, "faz direito")
+    } else if(loginValue.length < 6){
+        erroInput(login, "login deve conter 6 caracteres")
+    }else if(loginValue.length >6) {
+        erroInput(login, "login deve conter 6 caracteres")
+    }else{
+        const formItem = login.parentElement;
+        formItem.className = "textfielde"
+    }
+}
+
+function checkInputSenha(){
+    const senhaValue = senha.value;
+
+
+    if(senhaValue === ""){
+        erroInput(senha, "A senha é obrigatória")
+    }else if(senhaValue.length <8 ){
+        erroInput(senha, "A senha deve ter 8 digitos")
+    }else{
+        const formItem = senha.parentElement
+        formItem.className = "textfielde"
+    }
+}
+
+function checkInputConfirmSenha(){
+    const confirmSenhaValue = confirmSenha.value;
+    const senhaValue = senha.value;
+
+
+    if(confirmSenhaValue === ""){
+        erroInput(confirmSenha, "confirme a senha")
+    }else if(confirmSenhaValue !== senhaValue ){
+        erroInput(confirmSenha, "as senhas não correspondem")
+    }else{
+        const formItem = confirmSenha.parentElement
+        formItem.className = "textfielde"
     }
 }
 
 
-function validarLogin() {
-    if (login.value === '') {
-        errorLogin.setAttribute('style', 'display:block')
-        errorLogin.innerHTML = 'preencha o campo'
-        validLogin = false
-    } else if (login.value.length < 6 || login.value.length > 6) {
-        errorLogin.setAttribute('style', 'display:block')
-        errorLogin.innerHTML = 'login deve conter 6 caracteres'
+function checkInputNasc(){
+    const nascValue = nasc.value;
+
+    if(nascValue === ""){
+        erroInput(nasc, "faz direito")
     } else {
-        errorLogin.setAttribute('style', 'display:none')
-        validLogin = true
+        const formItem = nasc.parentElement;
+        formItem.className = "textfielde"
+    }
+}
+
+function checkInputMatName(){
+    const matNameValue = matName.value;
+
+    if(matNameValue === ""){
+        erroInput(matName, "faz direito")
+    } else {
+        const formItem = matName.parentElement;
+        formItem.className = "textfielde"
+    }
+}
+
+function checkInputCelular(){
+    const celularValue = celular.value;
+
+    if(celularValue === ""){
+        erroInput(celular, "faz direito")
+    } else {
+        const formItem = celular.parentElement;
+        formItem.className = "textfielde"
+    }
+}
+
+function checkInputTelefone(){
+    const telefoneValue = telefone.value;
+
+    if(telefoneValue  === ""){
+        erroInput(telefone, "ajeita isso")
+    }else{
+        const formItem = telefone.parentElement;
+        formItem.className = "textfielde"
+    }
+}
+
+// ====================== SEGUNDA PARTE DO FORMULÁRIO =======================
+
+function checkInputUf(){
+    const ufValue = uf.value;
+
+    if(ufValue  === ""){
+        erroInput(uf, "ajeita isso")
+    }else{
+        const formItem = uf.parentElement;
+        formItem.className = "textfielde"
     }
 }
 
 
-function validarSenha() {
-    if (senha.value == '') {
-        errorSenha.setAttribute('style', 'display:block')
-        errorSenha.innerHTML = 'preencha o campo'
-        validSenha = false
-    } else if (senha.value.length < 8 || senha.value.length > 8) {
-        errorSenha.setAttribute('style', 'display:block')
-        errorSenha.innerHTML = 'senha deve conter 8 caracteres'
-    } else {
-        errorSenha.setAttribute('style', 'display:none')
-        validSenha = true
+function checkInputLogradouro(){
+    const logradouroValue = logradouro.value;
+
+    if(logradouroValue  === ""){
+        erroInput(logradouro, "ajeita isso")
+    }else{
+        const formItem = logradouro.parentElement;
+        formItem.className = "textfielde"
     }
 }
 
 
-function validarConfirmSenha() {
+function checkInputNumero(){
+    const numeroValue = numero.value;
 
-    if (confirmSenha.value != senha.value) {
-        errorConfirmSenha.setAttribute('style', 'display:block')
-        errorConfirmSenha.innerHTML = 'senhas não conferem'
-        validConfirmSenha = false
-    } else {
-        errorConfirmSenha.setAttribute('style', 'display:none')
-        validConfirmSenha = true
+    if(numeroValue  === ""){
+        erroInput(numero, "ajeita isso")
+    }else{
+        const formItem = numero.parentElement;
+        formItem.className = "textfielde"
     }
 }
 
+function checkInputBairro(){
+    const bairroValue = bairro.value;
 
-function validarNasc() {
-
-    if (nasc.value == '') {
-        errorNasc.setAttribute('style', 'display:block')
-        errorNasc.innerHTML = 'preencha o campo'
-        validNasc = false
-    } else {
-        errorNasc.setAttribute('style', 'display:none')
-        validNasc = true
+    if(bairroValue  === ""){
+        erroInput(bairro, "ajeita isso")
+    }else{
+        const formItem = bairro.parentElement;
+        formItem.className = "textfielde"
     }
 }
 
+function checkInputCep(){
+    const cepValue = cep.value;
 
-function validarMatNome() {
-
-    if (matName.value == '') {
-        errorMatName.setAttribute('style', 'display:block')
-        errorMatName.innerHTML = 'preencha o campo'
-        validMatName = false
-    } else {
-        errorMatName.setAttribute('style', 'display:none')
-        validMatName = true
+    if(cepValue  === ""){
+        erroInput(cep, "ajeita isso")
+    }else{
+        const formItem = cep.parentElement;
+        formItem.className = "textfielde"
     }
 }
 
+function checkInputCidade(){
+    const cidadeValue = cidade.value;
 
-function validarCelular() {
-    if (celular.value == '') {
-        errorCelular.setAttribute('style', 'display:block')
-        errorCelular.innerHTML = 'preencha o campo'
-        validCelular = false
-    } else {
-        errorCelular.setAttribute('style', 'display:none')
-        validCelular = true
+    if(cidadeValue  === ""){
+        erroInput(cidade, "ajeita isso")
+    }else{
+        const formItem = cidade.parentElement;
+        formItem.className = "textfielde"
     }
 }
 
+// validação de todos os campos ===============
 
-function validarTelefone() {
-    if (telefone.value == '') {
-        errorTelefone.setAttribute('style', 'display:block')
-        errorTelefone.innerHTML = 'preencha o campo'
-        validTelefone = false
-    } else {
-        errorTelefone.setAttribute('style', 'display:none')
-        validTelefone = true
+function checkForm(){
+    checkInputUsername();
+    checkInputEmail();
+    checkInputLogin();
+    checkInputSenha();
+    checkInputConfirmSenha();
+    checkInputNasc();
+    checkInputMatName();
+    checkInputCelular();
+    checkInputTelefone();
+    checkInputLogradouro();
+    checkInputNumero();
+    checkInputBairro();
+    checkInputCep();
+    checkInputCidade();
+    checkInputUf();
+
+    const formItems = form.querySelectorAll(".textfielde")
+
+    const isValid = [...formItems].every( (item) => {
+        return item.className === "textfielde" //so vai enviar se não houver a classe error
+    })
+
+    if(isValid){
+        alert("Cadastrado com sucesso")
+    } else{
+        alert("preencha corretamente")
     }
+
 }
 
 
-function validarCep() {
-    if (telefone.value == '') {
-        errorTelefone.setAttribute('style', 'display:block')
-        errorTelefone.innerHTML = 'preencha o campo'
-        validTelefone = false
-    } else {
-        errorTelefone.setAttribute('style', 'display:none')
-        validTelefone = true
-    }
+
+
+// função par exibir erro
+function erroInput(input, message){
+    const formItem = input.parentElement; //parent pega a div pai do input nessa ocasião
+    const textMessage = formItem.querySelector("a");
+
+    textMessage.innerText = message;
+
+    formItem.className = "textfielde error"
 }
 
-
-function validarBairro() {
-    if (bairro.value == '') {
-        erorrBairro.setAttribute('style', 'display:block')
-        erorrBairro.innerHTML = 'preencha o campo'
-        validBairro = false
-    } else {
-        erorrBairro.setAttribute('style', 'display:none')
-        validBairro = true
-    }
-}
-
-
-function validarLogradouro() {
-    if (logradouro.value == '') {
-        errorLogradouro.setAttribute('style', 'display:block')
-        errorLogradouro.innerHTML = 'preencha o campo'
-        validLogradouro = false
-    } else {
-        errorLogradouro.setAttribute('style', 'display:none')
-        validLogradouro = true
-    }
-}
-
-
-function validarNumero() {
-    if (numero.value == '') {
-        errorNumero.setAttribute('style', 'display:block')
-        errorNumero.innerHTML = 'preencha o campo'
-        validNumero = false
-    } else {
-        errorNumero.setAttribute('style', 'display:none')
-        validNumero = true
-    }
-}
-
-
-function validarUf() {
-    if (uf.value == '') {
-        errorUf.setAttribute('style', 'display:block')
-        errorUf.innerHTML = 'preencha o campo'
-        validUf = false
-    } else {
-        errorUf.setAttribute('style', 'display:none')
-        validUf = true
-    }
-}
-
-
-function validarCidade() {
-    if (cidade.value == '') {
-        errorCidade.setAttribute('style', 'display:block')
-        errorCidade.innerHTML = 'preencha o campo'
-        validCidade = false
-    } else {
-        errorCidade.setAttribute('style', 'display:none')
-        validCidade = true
-    }
-}
-
-
-function cadastrar(event){
-    event.preventDefault();
-
-    
-let username = document.getElementById('username')
-
-
-let email = document.getElementById('email')
-
-
-let login = document.getElementById('login')
-
-
-let senha = document.getElementById('senha')
-
-
-let confirmSenha = document.getElementById('confirmSenha')
-
-
-let nasc = document.getElementById('nasc')
-
-
-let matName = document.getElementById('matName')
-
-
-let celular = document.getElementById('celular')
-
-
-let telefone = document.getElementById('telefone')
-
-
-let cep = document.getElementById('cep')
-
-let bairro = document.getElementById('bairro')
-
-let logradouro = document.getElementById('logradouro')
-
-let numero = document.getElementById('numero')
-
-
-let uf = document.getElementById('uf')
-
-
-let cidade = document.getElementById('cidade')
-
-if( username.value !=''
-&&  email.value != ''
-&&  login.value != ''
-&&  senha.value != ''
-&&  confirmSenha.value !=''
-&&  nasc.value != ''
-&&  matName.value != ''
-&&  celular.value != ''
-&& telefone.value != ''
-&& cep.value != ''
-&& bairro.value != ''
-&& logradouro.value != ''
-&& numero.value != ''
-&& uf.value != ''
-&& cidade.value != ''){
-
-   localStorage.setItem('nome', username.value);
-   localStorage.setItem('login', login.value);
-   localStorage.setItem('senha', senha.value);
-
-window.location = 'http://127.0.0.1:5503/login.html'
-} else {
-    alert('preencha todos os campos')
-}
-
-    
-}

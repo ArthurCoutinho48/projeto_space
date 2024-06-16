@@ -200,8 +200,16 @@ main {
     position: absolute;
     bottom: -3px;
     left: 0;
-    display: none;
+    visibility: hidden;
+}
+
+.textfielde.error input {
+    border-color: red;
+}
+
+.textfielde.error a {
     color: red;
+    visibility: visible;
 }
 
 .flex{
