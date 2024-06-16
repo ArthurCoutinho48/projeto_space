@@ -11,8 +11,11 @@ function conferirUsuario(event){
        
 
         setTimeout(() =>{
-             window.location.href = 'http://127.0.0.1:5503/index.html'
+             location.href = 'http://127.0.0.1:5502/cadastro.html'
         }, 1000)
+
+        let token = Math.random().toString(16).substring(2) 
+        localStorage.setItem('token', token) 
        
     } else {
         alert('usuario e senha invalidos')
