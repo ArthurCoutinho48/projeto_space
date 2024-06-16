@@ -81,5 +81,13 @@ section.slider{
     .nav-auto, .nav-manual{
         margin-top: 60%;
     }
+
+    .nav-manual, .nav-auto{
+        position: absolute;
+        width: 100%;
+        margin-top: 55%;
+        display: flex;
+        justify-content: center;
+    }
     
 }
